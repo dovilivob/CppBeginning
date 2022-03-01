@@ -1,6 +1,20 @@
 #include <iostream>
+#include <list>
+
+using namespace std;
+
+class Person {
+public:
+    string Name;
+    string Gender;
+    int Age;
+    list<string> Friends;
+};
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
+    Person David;
+    David.Name = "David";
+    David.Gender = "Male";
+    David.Age = 20;
+    David.Friends = {"David", "Noah"};
 }

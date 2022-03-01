@@ -1,0 +1,3 @@
+C:/Users/User/Programming/C++/CppBeginning/CppOOP/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/User/Programming/C++/CppBeginning/CppOOP/cmake-build-debug/CMakeFiles/CppOOP.dir
+C:/Users/User/Programming/C++/CppBeginning/CppOOP/cmake-build-debug/CMakeFiles/rebuild_cache.dir
