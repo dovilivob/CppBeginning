@@ -18,7 +18,9 @@ public:
 
 //    Constructor
     Person(string _name);
+
     Person(string _name, int _age, string _gender);
+
 //    Function
     void print();
 
@@ -43,16 +45,17 @@ Person::Person(string _name, int _age, string _gender) {
     age = _age;
     gender = _gender;
 }
-Person::Person(string _name){
+
+Person::Person(string _name) {
     name = _name;
 }
 
+//  Inheritance
 class Man : public Person {
 public:
     string habit = "Masturbate";
-    Man(string _name): Person(name){
-        name = _name;
-    }
+//    Inherit Constructor
+    Man(string name) : Person(name) {}
 };
 
 int main() {
