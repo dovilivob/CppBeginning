@@ -1,0 +1,3 @@
+C:\Users\dovilivob\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\213.6777.58\bin\cmake\win\bin\cmake.exe -E rm -f CMakeFiles\CppOOP.dir/objects.a
+C:\Users\dovilivob\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\213.6777.58\bin\mingw\bin\ar.exe qc CMakeFiles\CppOOP.dir/objects.a @CMakeFiles\CppOOP.dir\objects1.rsp
+C:\Users\dovilivob\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\213.6777.58\bin\mingw\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\CppOOP.dir/objects.a -Wl,--no-whole-archive -o CppOOP.exe -Wl,--out-implib,libCppOOP.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\CppOOP.dir\linklibs.rsp
