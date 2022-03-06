@@ -4,10 +4,12 @@
 using namespace std;
 
 bool PlayGame(int Difficulty) {
-    cout << "You're a secret agent breaking into a" << Difficulty << " secure server room..." << endl;
+    cout << "You're a secret agent breaking into a LEVEL" << Difficulty << " secure server room..." << endl;
     cout << "Enter the correct code to continue..." << endl;
 
-    const int AnsA = 4, AnsB = 3, AnsC = 2;
+    const int AnsA = rand() % (Difficulty * 2) + 1;
+    const int AnsB = rand() % (Difficulty * 3) + 1;
+    const int AnsC = rand() % (Difficulty * 4) + 1;
 
     const int AnsSum = AnsA + AnsB + AnsC;
     const int AnsProduct = AnsA * AnsB * AnsC;
@@ -36,6 +38,8 @@ void PlayGameAtDifficulty(int difficulty) {
 }
 
 int main() {
+//    set time as random seed.
+    srand(time(NULL));
     int LevelDifficulty = 1;
     while (true) {
         bool bLevelComplete = PlayGame(LevelDifficulty);
@@ -43,6 +47,8 @@ int main() {
         cin.ignore(); // Discards the buffer
         if (bLevelComplete) {
             ++LevelDifficulty;
+        } else {
+            exit(0);
         }
     }
     return 0;
