@@ -3,8 +3,8 @@
 
 using namespace std;
 
-void PlayGame() {
-    cout << "You're a secret agent breaking into a secure server room..." << endl;
+bool PlayGame(int Difficulty) {
+    cout << "You're a secret agent breaking into a" << Difficulty << " secure server room..." << endl;
     cout << "Enter the correct code to continue..." << endl;
 
     const int AnsA = 4, AnsB = 3, AnsC = 2;
@@ -24,8 +24,10 @@ void PlayGame() {
     int GuessProduct = GuessA * GuessB * GuessC;
     if (GuessSum == AnsSum && GuessProduct == AnsProduct) {
         cout << "You Win!!!" << endl;
+        return true;
     } else {
         cout << "You Sucker!!!" << endl;
+        return false;
     }
 }
 
@@ -34,11 +36,14 @@ void PlayGameAtDifficulty(int difficulty) {
 }
 
 int main() {
-    while(true)
-    {
-        PlayGame();
+    int LevelDifficulty = 1;
+    while (true) {
+        bool bLevelComplete = PlayGame(LevelDifficulty);
         cin.clear(); // Clears any errors
         cin.ignore(); // Discards the buffer
+        if (bLevelComplete) {
+            ++LevelDifficulty;
+        }
     }
     return 0;
 }
